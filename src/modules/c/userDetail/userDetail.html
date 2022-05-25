@@ -1,0 +1,42 @@
+<template>
+    <template if:true={userDetail}>
+        <lightning-breadcrumbs class="slds-m-bottom_xx-small">
+            <lightning-breadcrumb label="Home" href="/" onclick={navigateHome}></lightning-breadcrumb>
+            <lightning-breadcrumb label={userDetail.name} href=""></lightning-breadcrumb>
+        </lightning-breadcrumbs>
+
+        <lightning-card title="User Detail" icon-name="standard:user">
+            <div class="slds-form slds-p-horizontal_medium">
+                <div class="slds-form__row">
+                    <div class="slds-form__item">
+                        <lightning-input type="text" name="name" label="Name" value={userDetail.name} read-only></lightning-input>
+                    </div>
+                    <div class="slds-form__item">
+                        <lightning-input type="text" name="username" label="Username" value={userDetail.username} read-only></lightning-input>
+                    </div>
+                </div>
+                <div class="slds-form__row">
+                    <div class="slds-form__item">
+                        <lightning-input type="text" name="phone" label="Phone" value={userDetail.phone} read-only></lightning-input>
+                    </div>
+                    <div class="slds-form__item">
+                        <lightning-input type="email" name="email" label="Email" value={userDetail.email} read-only></lightning-input>
+                    </div>
+                </div>
+                <div class="slds-form__row">
+                    <div class="slds-form__item">
+                        <lightning-input type="text" name="company name" label="Company Name" value={userDetail.company.name} read-only></lightning-input>
+                    </div>
+                    <div class="slds-form__item">
+                        <lightning-input type="text" name="website" label="Website" value={userDetail.website} read-only></lightning-input>
+                    </div>
+                </div>
+            </div>
+            <div slot="footer">
+                <div class="slds-clearfix">
+                    <lightning-button variant="brand" label="Back" title="Back" onclick={navigateBack} class="slds-float_left"></lightning-button>
+                </div>
+            </div>
+        </lightning-card>
+    </template>
+</template>

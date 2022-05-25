@@ -1,0 +1,10 @@
+lightning-card {
+    display: block;
+}
+
+@media (min-width: 500px) {
+    lightning-card {
+        min-width: 500px;
+        display: block;
+    }
+}

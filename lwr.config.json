@@ -1,0 +1,31 @@
+{
+  "lwc": {
+    "modules": [
+      { "dir": "$rootDir/src/modules" },
+      {
+        "npm": "lightning-base-components"
+      }
+    ]
+  },
+  "bundleConfig": { "exclude": ["lwc", "@lwc/synthetic-shadow"] },
+  "routes": [
+    {
+      "id": "c",
+      "path": "/",
+      "rootComponent": "c/app",
+      "layoutTemplate": "$layoutsDir/main.html",
+      "bootstrap": {
+        "syntheticShadow": true
+      }
+    },
+    {
+      "id": "userDetail",
+      "path": "/userDetail",
+      "rootComponent": "c/app",
+      "layoutTemplate": "$layoutsDir/main.html",
+      "bootstrap": {
+        "syntheticShadow": true
+      }
+    }
+  ]
+}

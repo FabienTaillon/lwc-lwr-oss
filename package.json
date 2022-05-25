@@ -1,0 +1,25 @@
+{
+  "name": "lwc-lwr-oss",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf __lwr_cache__",
+    "build": "node ./scripts/copy-slds.mjs",
+    "dev": "lwr serve",
+    "start": "lwr serve --mode prod",
+    "start:compat": "lwr serve --mode compat",
+    "start:prod-compat": "lwr serve --mode prod-compat"
+  },
+  "dependencies": {
+    "@salesforce-ux/design-system": "^2.18.0",
+    "cpx": "^1.5.0",
+    "lightning-base-components": "^1.14.7-alpha",
+    "lwc": "2.5.8",
+    "lwr": "0.6.5"
+  },
+  "engines": {
+    "node": ">=14.15.4 <17"
+  }
+}
