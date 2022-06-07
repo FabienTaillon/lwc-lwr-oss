@@ -7,6 +7,13 @@
       }
     ]
   },
+  "assets": [
+        {
+            "alias": "assetsDir",
+            "dir": "$rootDir/src/assets",
+            "urlPath": "/assets"
+        }
+  ],
   "bundleConfig": { "exclude": ["lwc", "@lwc/synthetic-shadow"] },
   "routes": [
     {
