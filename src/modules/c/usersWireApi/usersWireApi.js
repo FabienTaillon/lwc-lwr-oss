@@ -40,18 +40,12 @@ export class getUser {
     }
 
     update(config) {
-        fetch(endpoint+config.id)
-        .then(response => response.json())
-        .then(data => {
-            this.dataCallback(data);
-        });
-    }
-
-    provideUserWithId(id) {
-        fetch(endpoint+id)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-        });
+        if (config && config.id) {
+            fetch(endpoint+config.id)
+            .then(response => response.json())
+            .then(data => {
+                this.dataCallback(data);
+            });
+        }
     }
 }
