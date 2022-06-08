@@ -1,10 +1,13 @@
 import { LightningElement, wire } from 'lwc';
-import { CurrentPageReference, NavigationMixin } from 'lightning/navigation';
+import { CurrentPageReference, NavigationContext, navigate } from 'lwr/navigation';
 import { getUser } from 'c/usersWireApi';
 
-export default class UserDetail extends NavigationMixin(LightningElement) {
+export default class UserDetail extends LightningElement {
 
     userId;
+
+    @wire(NavigationContext)
+    navContext;
 
     @wire(CurrentPageReference)
     pageRef(ref) {
@@ -20,8 +23,10 @@ export default class UserDetail extends NavigationMixin(LightningElement) {
     }
 
     navigateBack() {
-        this[NavigationMixin.Navigate]({
-            type: 'home'
-        });
+        if (this.navContext) {
+            navigate(this.navContext, {
+                type: 'home'
+            });
+        }
     }
 }
