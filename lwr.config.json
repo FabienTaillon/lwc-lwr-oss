@@ -18,16 +18,7 @@
   "routes": [
     {
       "id": "c",
-      "path": "/",
-      "rootComponent": "c/app",
-      "layoutTemplate": "$layoutsDir/main.html",
-      "bootstrap": {
-        "syntheticShadow": true
-      }
-    },
-    {
-      "id": "userDetail",
-      "path": "/userDetail",
+      "path": "/*",
       "rootComponent": "c/app",
       "layoutTemplate": "$layoutsDir/main.html",
       "bootstrap": {
