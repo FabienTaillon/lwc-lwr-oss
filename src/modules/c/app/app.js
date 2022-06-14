@@ -27,14 +27,4 @@ const routes = [
 export default class HelloWorldApp extends LightningElement {
 
     router = createRouter({ routes });
-    homeReference = { 
-        type: 'home' 
-    };
-
-    userReference = { 
-        type: 'namedPage', 
-        attributes: {
-            pageName: 'userDetail'
-        }
-    };
 }

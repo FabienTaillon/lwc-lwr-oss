@@ -1,8 +1,7 @@
 import { LightningElement, wire } from 'lwc';
-import { NavigationMixin } from 'lightning/navigation';
 import { getUsers } from 'c/usersWireApi';
 
-export default class Home extends NavigationMixin(LightningElement) {
+export default class Home extends LightningElement {
 
     users;
 

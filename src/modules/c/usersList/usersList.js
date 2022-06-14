@@ -1,23 +1,28 @@
 import { LightningElement, api, wire } from 'lwc';
-import { NavigationMixin } from 'lightning/navigation';
+import { NavigationContext, navigate } from 'lwr/navigation';
 
-export default class UsersList extends NavigationMixin(LightningElement) {
+export default class UsersList extends LightningElement {
 
     @api users;
+
+    @wire(NavigationContext)
+    navContext;
 
     navigateToUser(event) {
         // Prevent href
         event.preventDefault();
 
-        this[NavigationMixin.Navigate]({
-            type: 'namedPage',
-            attributes: {
-                pageName: 'userDetail'
-            },
-            state: {
-                recordId: event.currentTarget.dataset.id
-            }
-        });
+        if (this.navContext) {
+            navigate(this.navContext, {
+                type: 'namedPage',
+                attributes: {
+                    pageName: 'userDetail'
+                },
+                state: {
+                    recordId: event.currentTarget.dataset.id
+                }
+            });
+        }
     }
 
     handleFollow() {

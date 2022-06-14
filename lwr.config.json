@@ -7,20 +7,18 @@
       }
     ]
   },
+  "assets": [
+        {
+            "alias": "assetsDir",
+            "dir": "$rootDir/src/assets",
+            "urlPath": "/assets"
+        }
+  ],
   "bundleConfig": { "exclude": ["lwc", "@lwc/synthetic-shadow"] },
   "routes": [
     {
       "id": "c",
-      "path": "/",
-      "rootComponent": "c/app",
-      "layoutTemplate": "$layoutsDir/main.html",
-      "bootstrap": {
-        "syntheticShadow": true
-      }
-    },
-    {
-      "id": "userDetail",
-      "path": "/userDetail",
+      "path": "/*",
       "rootComponent": "c/app",
       "layoutTemplate": "$layoutsDir/main.html",
       "bootstrap": {
