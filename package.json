@@ -8,7 +8,7 @@
     "clean": "rm -rf __lwr_cache__",
     "build": "node ./scripts/copy-slds.mjs",
     "dev": "lwr serve",
-    "start": "lwr serve --mode prod",
+    "start": "WARMUP=true lwr serve --mode prod",
     "start:compat": "lwr serve --mode compat",
     "start:prod-compat": "lwr serve --mode prod-compat"
   },
