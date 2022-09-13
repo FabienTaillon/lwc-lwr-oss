@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "clean": "rm -rf __lwr_cache__",
-    "build": "node ./scripts/copy-slds.mjs",
+    "copy:slds": "node ./scripts/copy-slds.mjs",
     "dev": "lwr serve",
     "start": "WARMUP=true lwr serve --mode prod",
     "start:compat": "lwr serve --mode compat",
