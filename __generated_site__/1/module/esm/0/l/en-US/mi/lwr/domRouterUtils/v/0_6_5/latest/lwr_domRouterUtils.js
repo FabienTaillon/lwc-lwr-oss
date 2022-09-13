@@ -1,0 +1,2 @@
+export { getRelativeUrl } from '/1/module/esm/0/l/en-US/mi/lwr%2FdomRouterUtils%23uriUtils%2Fv%2F0_6_5/latest/lwr_domRouterUtils_uriUtils.js';
+export { set, replace } from '/1/module/esm/0/l/en-US/mi/lwr%2FdomRouterUtils%23historyUtils%2Fv%2F0_6_5/latest/lwr_domRouterUtils_historyUtils.js';
