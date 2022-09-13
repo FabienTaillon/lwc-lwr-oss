@@ -8,11 +8,11 @@
     ]
   },
   "assets": [
-        {
-            "alias": "assetsDir",
-            "dir": "$rootDir/src/assets",
-            "urlPath": "/assets"
-        }
+    {
+      "alias": "assetsDir",
+      "dir": "$rootDir/src/assets",
+      "urlPath": "/assets"
+    }
   ],
   "bundleConfig": { "exclude": ["lwc", "@lwc/synthetic-shadow"] },
   "routes": [
@@ -25,5 +25,11 @@
         "syntheticShadow": true
       }
     }
+  ],
+  "moduleProviders": [
+    "@lwrjs/label-module-provider",
+    "@lwrjs/app-service/moduleProvider",
+    "@lwrjs/lwc-module-provider",
+    "@lwrjs/npm-module-provider"
   ]
 }
