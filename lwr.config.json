@@ -14,7 +14,7 @@
       "urlPath": "/assets"
     }
   ],
-  "bundleConfig": { "exclude": ["lwc", "@lwc/synthetic-shadow"] },
+  "bundleConfig": { "exclude": ["lwc", "@lwc/synthetic-shadow", "lwr/navigation"] },
   "routes": [
     {
       "id": "home",
@@ -40,5 +40,12 @@
     "@lwrjs/app-service/moduleProvider",
     "@lwrjs/lwc-module-provider",
     "@lwrjs/npm-module-provider"
-  ]
+  ],
+  "staticSiteGenerator": {
+    "_additionalModules": [
+        "@lwc/synthetic-shadow",
+        "lwc",
+        "lwr/navigation"
+    ]
+  }
 }
